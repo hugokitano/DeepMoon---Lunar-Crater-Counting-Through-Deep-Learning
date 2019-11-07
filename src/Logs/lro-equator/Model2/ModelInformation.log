@@ -1,0 +1,122 @@
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 2, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model2/'}
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 10
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 2, 'num_epochs': 10, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model2/'}
+INFO:root:Training for 10 epochs
+INFO:root:Step 250: total loss=2.336665, rpn_cls loss=0.557377, rpn_bbox loss=1.339394, rcnn_cls loss=0.433478, rcnn_bbox loss=0.006416
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_1.ckpt
+INFO:root:Average Precision for class 1: 0.011874
+INFO:root:Mean Average Precision on VALID Set: 0.011874
+INFO:root:Making New VALID file
+INFO:root:Step 500: total loss=4.580175, rpn_cls loss=0.285268, rpn_bbox loss=4.074104, rcnn_cls loss=0.218949, rcnn_bbox loss=0.001853
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_2.ckpt
+INFO:root:Average Precision for class 1: 5.7751e-05
+INFO:root:Mean Average Precision on VALID Set: 0.000058
+INFO:root:Appending to VALID file
+INFO:root:Step 750: total loss=0.578170, rpn_cls loss=0.256786, rpn_bbox loss=0.194034, rcnn_cls loss=0.126152, rcnn_bbox loss=0.001198
+INFO:root:Step 1000: total loss=0.311362, rpn_cls loss=0.172872, rpn_bbox loss=0.063088, rcnn_cls loss=0.074268, rcnn_bbox loss=0.001133
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_3.ckpt
+INFO:root:Average Precision for class 1: 0.0027528
+INFO:root:Mean Average Precision on VALID Set: 0.002753
+INFO:root:Appending to VALID file
+INFO:root:Step 1250: total loss=0.764194, rpn_cls loss=0.145491, rpn_bbox loss=0.571212, rcnn_cls loss=0.047386, rcnn_bbox loss=0.000105
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_4.ckpt
+INFO:root:Average Precision for class 1: 0.00014596
+INFO:root:Mean Average Precision on VALID Set: 0.000146
+INFO:root:Appending to VALID file
+INFO:root:Step 1500: total loss=0.937660, rpn_cls loss=0.127411, rpn_bbox loss=0.791150, rcnn_cls loss=0.018521, rcnn_bbox loss=0.000578
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_5.ckpt
+INFO:root:Average Precision for class 1: 0.00061098
+INFO:root:Mean Average Precision on VALID Set: 0.000611
+INFO:root:Appending to VALID file
+INFO:root:Step 1750: total loss=0.429783, rpn_cls loss=0.242475, rpn_bbox loss=0.123865, rcnn_cls loss=0.062813, rcnn_bbox loss=0.000630
+INFO:root:Step 2000: total loss=0.140335, rpn_cls loss=0.087916, rpn_bbox loss=0.012607, rcnn_cls loss=0.039629, rcnn_bbox loss=0.000183
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_6.ckpt
+INFO:root:Average Precision for class 1: 0.0008415
+INFO:root:Mean Average Precision on VALID Set: 0.000842
+INFO:root:Appending to VALID file
+INFO:root:Step 2250: total loss=0.317691, rpn_cls loss=0.127721, rpn_bbox loss=0.172256, rcnn_cls loss=0.016737, rcnn_bbox loss=0.000977
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_7.ckpt
+INFO:root:Average Precision for class 1: 0.0013712
+INFO:root:Mean Average Precision on VALID Set: 0.001371
+INFO:root:Appending to VALID file
+INFO:root:Step 2500: total loss=0.168678, rpn_cls loss=0.141224, rpn_bbox loss=0.003555, rcnn_cls loss=0.023897, rcnn_bbox loss=0.000003
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_8.ckpt
+INFO:root:Average Precision for class 1: 5.1823e-05
+INFO:root:Mean Average Precision on VALID Set: 0.000052
+INFO:root:Appending to VALID file
+INFO:root:Step 2750: total loss=0.218850, rpn_cls loss=0.114560, rpn_bbox loss=0.041579, rcnn_cls loss=0.062328, rcnn_bbox loss=0.000383
+INFO:root:Step 3000: total loss=1.115540, rpn_cls loss=0.141541, rpn_bbox loss=0.923875, rcnn_cls loss=0.049203, rcnn_bbox loss=0.000922
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_9.ckpt
+INFO:root:Average Precision for class 1: 0.00054967
+INFO:root:Mean Average Precision on VALID Set: 0.000550
+INFO:root:Appending to VALID file
+INFO:root:Step 3250: total loss=0.239557, rpn_cls loss=0.092258, rpn_bbox loss=0.132712, rcnn_cls loss=0.012979, rcnn_bbox loss=0.001608
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model2/part_10.ckpt
+INFO:root:Average Precision for class 1: 0.00057944
+INFO:root:Mean Average Precision on VALID Set: 0.000579
+INFO:root:Appending to VALID file

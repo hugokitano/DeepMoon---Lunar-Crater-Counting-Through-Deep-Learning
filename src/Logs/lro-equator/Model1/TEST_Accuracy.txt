@@ -1,0 +1,1 @@
+Epoch: 0TEST set mAP: 0.007996 

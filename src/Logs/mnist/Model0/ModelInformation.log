@@ -1,0 +1,687 @@
+WARNING:tensorflow:From faster_rcnn_conv5.py:60: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:712: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:77: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:455: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:458: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+WARNING:tensorflow:From ../Networks/anchor_target_layer.py:40: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+INFO:root:conv_1 output: (1, ?, ?, 36)
+WARNING:tensorflow:From ../Lib/roi_pool.py:31: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From ../Lib/roi_pool.py:38: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+WARNING:tensorflow:From ../Lib/roi_pool.py:41: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+INFO:root:flat_1 output: (?, 6272)
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:274: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+WARNING:tensorflow:From ../Lib/loss_functions.py:38: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From faster_rcnn_conv5.py:116: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:119: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:123: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:721: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:722: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:726: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+WARNING:tensorflow:From faster_rcnn_conv5.py:60: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:712: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:77: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:455: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:458: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+WARNING:tensorflow:From ../Networks/anchor_target_layer.py:40: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+INFO:root:conv_1 output: (1, ?, ?, 36)
+WARNING:tensorflow:From ../Lib/roi_pool.py:31: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From ../Lib/roi_pool.py:38: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+WARNING:tensorflow:From ../Lib/roi_pool.py:41: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+INFO:root:flat_1 output: (?, 6272)
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:274: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+WARNING:tensorflow:From ../Lib/loss_functions.py:38: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From faster_rcnn_conv5.py:116: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:119: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:123: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:721: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:722: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:726: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+WARNING:tensorflow:From faster_rcnn_conv5.py:60: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:712: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:77: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:455: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:458: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+WARNING:tensorflow:From ../Networks/anchor_target_layer.py:40: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+INFO:root:conv_1 output: (1, ?, ?, 36)
+WARNING:tensorflow:From ../Lib/roi_pool.py:31: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From ../Lib/roi_pool.py:38: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+WARNING:tensorflow:From ../Lib/roi_pool.py:41: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+INFO:root:flat_1 output: (?, 6272)
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:274: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+WARNING:tensorflow:From ../Lib/loss_functions.py:38: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From faster_rcnn_conv5.py:116: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:119: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:123: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:721: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:722: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:726: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+WARNING:tensorflow:From faster_rcnn_conv5.py:60: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:712: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:77: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:455: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:458: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+WARNING:tensorflow:From ../Networks/anchor_target_layer.py:40: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+INFO:root:conv_1 output: (1, ?, ?, 36)
+WARNING:tensorflow:From ../Lib/roi_pool.py:31: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From ../Lib/roi_pool.py:38: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+WARNING:tensorflow:From ../Lib/roi_pool.py:41: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+INFO:root:flat_1 output: (?, 6272)
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:274: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+WARNING:tensorflow:From ../Lib/loss_functions.py:38: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From faster_rcnn_conv5.py:116: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:119: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:123: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:721: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:722: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:726: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+WARNING:tensorflow:From faster_rcnn_conv5.py:60: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:712: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:77: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:455: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:458: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+WARNING:tensorflow:From ../Networks/anchor_target_layer.py:40: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+INFO:root:conv_1 output: (1, ?, ?, 36)
+WARNING:tensorflow:From ../Lib/roi_pool.py:31: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From ../Lib/roi_pool.py:38: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+WARNING:tensorflow:From ../Lib/roi_pool.py:41: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+INFO:root:flat_1 output: (?, 6272)
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:274: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+WARNING:tensorflow:From ../Lib/loss_functions.py:38: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From faster_rcnn_conv5.py:116: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:119: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:123: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:721: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:722: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:726: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+WARNING:tensorflow:From faster_rcnn_conv5.py:60: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:712: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:77: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:455: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:458: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+WARNING:tensorflow:From ../Networks/anchor_target_layer.py:40: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+INFO:root:conv_1 output: (1, ?, ?, 36)
+WARNING:tensorflow:From ../Lib/roi_pool.py:31: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From ../Lib/roi_pool.py:38: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+WARNING:tensorflow:From ../Lib/roi_pool.py:41: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+INFO:root:flat_1 output: (?, 6272)
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:274: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+WARNING:tensorflow:From ../Lib/loss_functions.py:38: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From faster_rcnn_conv5.py:116: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:119: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From faster_rcnn_conv5.py:123: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:721: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:722: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:726: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+WARNING:tensorflow:From /Users/mfinkels/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+WARNING:tensorflow:From ../Networks/anchor_target_layer.py:40: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, use
+    tf.py_function, which takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    
+INFO:root:conv_1 output: (1, ?, ?, 36)
+WARNING:tensorflow:From ../Lib/roi_pool.py:31: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:root:flat_1 output: (?, 6272)
+WARNING:tensorflow:From ../Lib/TensorBase/tensorbase/base.py:274: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+WARNING:tensorflow:From /Users/mfinkels/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 5
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 5, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 5 epochs
+INFO:root:Step 250: total loss=1.867370, rpn_cls loss=0.170856, rpn_bbox loss=0.044014, rcnn_cls loss=1.639844, rcnn_bbox loss=0.012656
+INFO:root:Step 500: total loss=1.080244, rpn_cls loss=0.083794, rpn_bbox loss=0.007857, rcnn_cls loss=0.983348, rcnn_bbox loss=0.005245
+INFO:root:Step 750: total loss=0.604983, rpn_cls loss=0.059728, rpn_bbox loss=0.020595, rcnn_cls loss=0.519716, rcnn_bbox loss=0.004944
+INFO:root:Step 1000: total loss=0.336032, rpn_cls loss=0.052127, rpn_bbox loss=0.060632, rcnn_cls loss=0.221825, rcnn_bbox loss=0.001448
+INFO:root:Step 1250: total loss=0.248012, rpn_cls loss=0.043816, rpn_bbox loss=0.048652, rcnn_cls loss=0.154440, rcnn_bbox loss=0.001104
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 11)
+INFO:root:fc_1 output: (?, 44)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/clutteredMNIST/', 'save_directory': '../Logs/', 'model_directory': 'mnist/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/mnist/Model1/', 'logging_directory': '../Logs/mnist/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:Step 250: total loss=1.873353, rpn_cls loss=0.173846, rpn_bbox loss=0.046361, rcnn_cls loss=1.646646, rcnn_bbox loss=0.006499
+INFO:root:Step 500: total loss=1.080486, rpn_cls loss=0.082508, rpn_bbox loss=0.011357, rcnn_cls loss=0.981097, rcnn_bbox loss=0.005524
+INFO:root:Step 750: total loss=0.507445, rpn_cls loss=0.056720, rpn_bbox loss=0.017073, rcnn_cls loss=0.430905, rcnn_bbox loss=0.002748
+INFO:root:Step 1000: total loss=0.335805, rpn_cls loss=0.059925, rpn_bbox loss=0.042136, rcnn_cls loss=0.230082, rcnn_bbox loss=0.003662
+INFO:root:Step 1250: total loss=0.231911, rpn_cls loss=0.040047, rpn_bbox loss=0.040858, rcnn_cls loss=0.149939, rcnn_bbox loss=0.001067
+INFO:root:Step 1500: total loss=0.249763, rpn_cls loss=0.027672, rpn_bbox loss=0.033183, rcnn_cls loss=0.184169, rcnn_bbox loss=0.004738
+INFO:root:Step 1750: total loss=0.275052, rpn_cls loss=0.041286, rpn_bbox loss=0.031097, rcnn_cls loss=0.171585, rcnn_bbox loss=0.031083
+INFO:root:Step 2000: total loss=0.147426, rpn_cls loss=0.011079, rpn_bbox loss=0.004895, rcnn_cls loss=0.128278, rcnn_bbox loss=0.003173
+INFO:root:Step 2250: total loss=0.127537, rpn_cls loss=0.020501, rpn_bbox loss=0.006646, rcnn_cls loss=0.097826, rcnn_bbox loss=0.002564
+INFO:root:Step 2500: total loss=0.077571, rpn_cls loss=0.012470, rpn_bbox loss=0.012932, rcnn_cls loss=0.052017, rcnn_bbox loss=0.000152
+INFO:root:Step 2750: total loss=0.264664, rpn_cls loss=0.007008, rpn_bbox loss=0.001513, rcnn_cls loss=0.249016, rcnn_bbox loss=0.007127
+INFO:root:Step 3000: total loss=0.144803, rpn_cls loss=0.003712, rpn_bbox loss=0.008595, rcnn_cls loss=0.129601, rcnn_bbox loss=0.002894
+INFO:root:Step 3250: total loss=0.042703, rpn_cls loss=0.003422, rpn_bbox loss=0.005402, rcnn_cls loss=0.031965, rcnn_bbox loss=0.001914
+INFO:root:Step 3500: total loss=0.112699, rpn_cls loss=0.003284, rpn_bbox loss=0.014583, rcnn_cls loss=0.092043, rcnn_bbox loss=0.002789
+INFO:root:Step 3750: total loss=0.079206, rpn_cls loss=0.022618, rpn_bbox loss=0.011813, rcnn_cls loss=0.043332, rcnn_bbox loss=0.001443
+INFO:root:Step 4000: total loss=0.069838, rpn_cls loss=0.010684, rpn_bbox loss=0.005469, rcnn_cls loss=0.052552, rcnn_bbox loss=0.001133
+INFO:root:Step 4250: total loss=0.036284, rpn_cls loss=0.003573, rpn_bbox loss=0.011116, rcnn_cls loss=0.020676, rcnn_bbox loss=0.000920
+INFO:root:Step 4500: total loss=0.051952, rpn_cls loss=0.002204, rpn_bbox loss=0.022331, rcnn_cls loss=0.023989, rcnn_bbox loss=0.003428
+INFO:root:Step 4750: total loss=0.012638, rpn_cls loss=0.003476, rpn_bbox loss=0.003981, rcnn_cls loss=0.004283, rcnn_bbox loss=0.000898
+INFO:root:Step 5000: total loss=0.031474, rpn_cls loss=0.001702, rpn_bbox loss=0.018147, rcnn_cls loss=0.010140, rcnn_bbox loss=0.001485
+INFO:root:Step 5250: total loss=0.013918, rpn_cls loss=0.003075, rpn_bbox loss=0.006004, rcnn_cls loss=0.004202, rcnn_bbox loss=0.000636
+INFO:root:Step 5500: total loss=0.080646, rpn_cls loss=0.000880, rpn_bbox loss=0.006703, rcnn_cls loss=0.072176, rcnn_bbox loss=0.000887
+INFO:root:Step 5750: total loss=0.240996, rpn_cls loss=0.010990, rpn_bbox loss=0.011858, rcnn_cls loss=0.215374, rcnn_bbox loss=0.002775
+INFO:root:Step 6000: total loss=0.013915, rpn_cls loss=0.002283, rpn_bbox loss=0.003213, rcnn_cls loss=0.008295, rcnn_bbox loss=0.000124
+INFO:root:Step 6250: total loss=0.155383, rpn_cls loss=0.013619, rpn_bbox loss=0.005310, rcnn_cls loss=0.132795, rcnn_bbox loss=0.003658
+INFO:root:Step 6500: total loss=0.084002, rpn_cls loss=0.005009, rpn_bbox loss=0.019664, rcnn_cls loss=0.058802, rcnn_bbox loss=0.000526
+INFO:root:Step 6750: total loss=0.050817, rpn_cls loss=0.001078, rpn_bbox loss=0.002055, rcnn_cls loss=0.045111, rcnn_bbox loss=0.002574
+INFO:root:Step 7000: total loss=0.058185, rpn_cls loss=0.001088, rpn_bbox loss=0.008996, rcnn_cls loss=0.047790, rcnn_bbox loss=0.000311
+INFO:root:Step 7250: total loss=0.065704, rpn_cls loss=0.018614, rpn_bbox loss=0.007389, rcnn_cls loss=0.036852, rcnn_bbox loss=0.002849
+INFO:root:Step 7500: total loss=0.011966, rpn_cls loss=0.003703, rpn_bbox loss=0.005379, rcnn_cls loss=0.002564, rcnn_bbox loss=0.000319
+INFO:root:Step 7750: total loss=0.110787, rpn_cls loss=0.013145, rpn_bbox loss=0.020069, rcnn_cls loss=0.076597, rcnn_bbox loss=0.000976
+INFO:root:Step 8000: total loss=0.018712, rpn_cls loss=0.000520, rpn_bbox loss=0.006891, rcnn_cls loss=0.010660, rcnn_bbox loss=0.000640
+INFO:root:Step 8250: total loss=0.048314, rpn_cls loss=0.001601, rpn_bbox loss=0.025105, rcnn_cls loss=0.018869, rcnn_bbox loss=0.002739
+INFO:root:Step 8500: total loss=0.007789, rpn_cls loss=0.000850, rpn_bbox loss=0.005206, rcnn_cls loss=0.001347, rcnn_bbox loss=0.000386
+INFO:root:Step 8750: total loss=0.044429, rpn_cls loss=0.001720, rpn_bbox loss=0.012113, rcnn_cls loss=0.028635, rcnn_bbox loss=0.001962
+INFO:root:Step 9000: total loss=0.169838, rpn_cls loss=0.000520, rpn_bbox loss=0.001228, rcnn_cls loss=0.165219, rcnn_bbox loss=0.002871
+INFO:root:Step 9250: total loss=0.012064, rpn_cls loss=0.005794, rpn_bbox loss=0.003252, rcnn_cls loss=0.001599, rcnn_bbox loss=0.001418
+INFO:root:Step 9500: total loss=0.058577, rpn_cls loss=0.003650, rpn_bbox loss=0.008436, rcnn_cls loss=0.044550, rcnn_bbox loss=0.001940
+INFO:root:Step 9750: total loss=0.098421, rpn_cls loss=0.005624, rpn_bbox loss=0.003619, rcnn_cls loss=0.086417, rcnn_bbox loss=0.002761
+INFO:root:Step 10000: total loss=0.062294, rpn_cls loss=0.001839, rpn_bbox loss=0.010684, rcnn_cls loss=0.048212, rcnn_bbox loss=0.001559
+INFO:root:Step 10250: total loss=0.082773, rpn_cls loss=0.024418, rpn_bbox loss=0.015088, rcnn_cls loss=0.039516, rcnn_bbox loss=0.003750
+INFO:root:Step 10500: total loss=0.042927, rpn_cls loss=0.001473, rpn_bbox loss=0.018156, rcnn_cls loss=0.021953, rcnn_bbox loss=0.001344
+INFO:root:Step 10750: total loss=0.006055, rpn_cls loss=0.000293, rpn_bbox loss=0.002529, rcnn_cls loss=0.002085, rcnn_bbox loss=0.001149
+INFO:root:Step 11000: total loss=0.041457, rpn_cls loss=0.019041, rpn_bbox loss=0.013126, rcnn_cls loss=0.009121, rcnn_bbox loss=0.000169
+INFO:root:Step 11250: total loss=0.038531, rpn_cls loss=0.000325, rpn_bbox loss=0.014368, rcnn_cls loss=0.022401, rcnn_bbox loss=0.001437
+INFO:root:Step 11500: total loss=0.034225, rpn_cls loss=0.000377, rpn_bbox loss=0.006836, rcnn_cls loss=0.026094, rcnn_bbox loss=0.000919
+INFO:root:Step 11750: total loss=0.057822, rpn_cls loss=0.000391, rpn_bbox loss=0.013748, rcnn_cls loss=0.041944, rcnn_bbox loss=0.001738
+INFO:root:Step 12000: total loss=0.003599, rpn_cls loss=0.000380, rpn_bbox loss=0.000930, rcnn_cls loss=0.001065, rcnn_bbox loss=0.001224
+INFO:root:Step 12250: total loss=0.060445, rpn_cls loss=0.000861, rpn_bbox loss=0.012452, rcnn_cls loss=0.045483, rcnn_bbox loss=0.001648
+INFO:root:Step 12500: total loss=0.067115, rpn_cls loss=0.000281, rpn_bbox loss=0.006526, rcnn_cls loss=0.058930, rcnn_bbox loss=0.001378
+INFO:root:Step 12750: total loss=0.004741, rpn_cls loss=0.000300, rpn_bbox loss=0.002543, rcnn_cls loss=0.001507, rcnn_bbox loss=0.000391
+INFO:root:Step 13000: total loss=0.028795, rpn_cls loss=0.000252, rpn_bbox loss=0.005426, rcnn_cls loss=0.022767, rcnn_bbox loss=0.000350
+INFO:root:Step 13250: total loss=0.006257, rpn_cls loss=0.000156, rpn_bbox loss=0.004531, rcnn_cls loss=0.001240, rcnn_bbox loss=0.000330
+INFO:root:Step 13500: total loss=0.043689, rpn_cls loss=0.007000, rpn_bbox loss=0.017510, rcnn_cls loss=0.018303, rcnn_bbox loss=0.000875
+INFO:root:Step 13750: total loss=0.033119, rpn_cls loss=0.004667, rpn_bbox loss=0.024330, rcnn_cls loss=0.002195, rcnn_bbox loss=0.001927
+INFO:root:Step 14000: total loss=0.023544, rpn_cls loss=0.004225, rpn_bbox loss=0.009026, rcnn_cls loss=0.009629, rcnn_bbox loss=0.000663
+INFO:root:Step 14250: total loss=0.008449, rpn_cls loss=0.000245, rpn_bbox loss=0.003964, rcnn_cls loss=0.003447, rcnn_bbox loss=0.000793
+INFO:root:Step 14500: total loss=0.037817, rpn_cls loss=0.000165, rpn_bbox loss=0.003526, rcnn_cls loss=0.032395, rcnn_bbox loss=0.001731
+INFO:root:Step 14750: total loss=0.017765, rpn_cls loss=0.000193, rpn_bbox loss=0.016852, rcnn_cls loss=0.000457, rcnn_bbox loss=0.000263
+INFO:root:Step 15000: total loss=0.021867, rpn_cls loss=0.000137, rpn_bbox loss=0.002648, rcnn_cls loss=0.018476, rcnn_bbox loss=0.000606
+INFO:root:Step 15250: total loss=0.040904, rpn_cls loss=0.000734, rpn_bbox loss=0.008581, rcnn_cls loss=0.030168, rcnn_bbox loss=0.001420
+INFO:root:Step 15500: total loss=0.101669, rpn_cls loss=0.000176, rpn_bbox loss=0.012235, rcnn_cls loss=0.084321, rcnn_bbox loss=0.004938
+INFO:root:Step 15750: total loss=0.003283, rpn_cls loss=0.000283, rpn_bbox loss=0.001900, rcnn_cls loss=0.000977, rcnn_bbox loss=0.000123
+INFO:root:Step 16000: total loss=0.057537, rpn_cls loss=0.000131, rpn_bbox loss=0.005178, rcnn_cls loss=0.051234, rcnn_bbox loss=0.000994
+INFO:root:Step 16250: total loss=0.098928, rpn_cls loss=0.009160, rpn_bbox loss=0.008633, rcnn_cls loss=0.079656, rcnn_bbox loss=0.001479
+INFO:root:Step 16500: total loss=0.011182, rpn_cls loss=0.001388, rpn_bbox loss=0.003780, rcnn_cls loss=0.004898, rcnn_bbox loss=0.001115
+INFO:root:Step 16750: total loss=0.068617, rpn_cls loss=0.000194, rpn_bbox loss=0.016450, rcnn_cls loss=0.051017, rcnn_bbox loss=0.000956
+INFO:root:Step 17000: total loss=0.020969, rpn_cls loss=0.000746, rpn_bbox loss=0.002971, rcnn_cls loss=0.017202, rcnn_bbox loss=0.000049
+INFO:root:Step 17250: total loss=0.008271, rpn_cls loss=0.000087, rpn_bbox loss=0.000886, rcnn_cls loss=0.007120, rcnn_bbox loss=0.000178
+INFO:root:Step 17500: total loss=0.009051, rpn_cls loss=0.000185, rpn_bbox loss=0.003237, rcnn_cls loss=0.003708, rcnn_bbox loss=0.001921
+INFO:root:Step 17750: total loss=0.007268, rpn_cls loss=0.000173, rpn_bbox loss=0.005986, rcnn_cls loss=0.000754, rcnn_bbox loss=0.000355
+INFO:root:Step 18000: total loss=0.035490, rpn_cls loss=0.001187, rpn_bbox loss=0.011380, rcnn_cls loss=0.021344, rcnn_bbox loss=0.001579
+INFO:root:Step 18250: total loss=0.020024, rpn_cls loss=0.004214, rpn_bbox loss=0.009340, rcnn_cls loss=0.005037, rcnn_bbox loss=0.001434
+INFO:root:Step 18500: total loss=0.006107, rpn_cls loss=0.000044, rpn_bbox loss=0.002153, rcnn_cls loss=0.002046, rcnn_bbox loss=0.001864
+INFO:root:Step 18750: total loss=0.096593, rpn_cls loss=0.004745, rpn_bbox loss=0.004243, rcnn_cls loss=0.086983, rcnn_bbox loss=0.000623
+INFO:root:Step 19000: total loss=0.010276, rpn_cls loss=0.005822, rpn_bbox loss=0.003363, rcnn_cls loss=0.000965, rcnn_bbox loss=0.000126
+INFO:root:Step 19250: total loss=0.074504, rpn_cls loss=0.001199, rpn_bbox loss=0.009229, rcnn_cls loss=0.063163, rcnn_bbox loss=0.000914
+INFO:root:Step 19500: total loss=0.002965, rpn_cls loss=0.000043, rpn_bbox loss=0.001781, rcnn_cls loss=0.000792, rcnn_bbox loss=0.000349
+INFO:root:Step 19750: total loss=0.001833, rpn_cls loss=0.000221, rpn_bbox loss=0.000604, rcnn_cls loss=0.000716, rcnn_bbox loss=0.000291
+INFO:root:Step 20000: total loss=0.107699, rpn_cls loss=0.005406, rpn_bbox loss=0.019770, rcnn_cls loss=0.081489, rcnn_bbox loss=0.001034
+INFO:root:Step 20250: total loss=0.002572, rpn_cls loss=0.000150, rpn_bbox loss=0.002000, rcnn_cls loss=0.000388, rcnn_bbox loss=0.000034
+INFO:root:Step 20500: total loss=0.042007, rpn_cls loss=0.001682, rpn_bbox loss=0.031916, rcnn_cls loss=0.006815, rcnn_bbox loss=0.001595
+INFO:root:Step 20750: total loss=0.033256, rpn_cls loss=0.000132, rpn_bbox loss=0.002157, rcnn_cls loss=0.029358, rcnn_bbox loss=0.001608
+INFO:root:Step 21000: total loss=0.031759, rpn_cls loss=0.000094, rpn_bbox loss=0.004872, rcnn_cls loss=0.025955, rcnn_bbox loss=0.000839
+INFO:root:Step 21250: total loss=0.010305, rpn_cls loss=0.008687, rpn_bbox loss=0.000615, rcnn_cls loss=0.000910, rcnn_bbox loss=0.000092
+INFO:root:Step 21500: total loss=0.009500, rpn_cls loss=0.000090, rpn_bbox loss=0.007608, rcnn_cls loss=0.001597, rcnn_bbox loss=0.000205
+INFO:root:Step 21750: total loss=0.016435, rpn_cls loss=0.010592, rpn_bbox loss=0.001819, rcnn_cls loss=0.003874, rcnn_bbox loss=0.000150
+INFO:root:Step 22000: total loss=0.012623, rpn_cls loss=0.000088, rpn_bbox loss=0.000686, rcnn_cls loss=0.010902, rcnn_bbox loss=0.000948
+INFO:root:Step 22250: total loss=0.004075, rpn_cls loss=0.001712, rpn_bbox loss=0.001456, rcnn_cls loss=0.000887, rcnn_bbox loss=0.000020
+INFO:root:Step 22500: total loss=0.047064, rpn_cls loss=0.007624, rpn_bbox loss=0.010605, rcnn_cls loss=0.028433, rcnn_bbox loss=0.000402
+INFO:root:Step 22750: total loss=0.033872, rpn_cls loss=0.002260, rpn_bbox loss=0.007192, rcnn_cls loss=0.022556, rcnn_bbox loss=0.001864
+INFO:root:Step 23000: total loss=0.043009, rpn_cls loss=0.010684, rpn_bbox loss=0.004059, rcnn_cls loss=0.028063, rcnn_bbox loss=0.000203
+INFO:root:Step 23250: total loss=0.109137, rpn_cls loss=0.000074, rpn_bbox loss=0.001616, rcnn_cls loss=0.107250, rcnn_bbox loss=0.000197
+INFO:root:Step 23500: total loss=0.023120, rpn_cls loss=0.000321, rpn_bbox loss=0.002059, rcnn_cls loss=0.020061, rcnn_bbox loss=0.000679
+INFO:root:Step 23750: total loss=0.007683, rpn_cls loss=0.000383, rpn_bbox loss=0.006736, rcnn_cls loss=0.000453, rcnn_bbox loss=0.000111
+INFO:root:Step 24000: total loss=0.004190, rpn_cls loss=0.000109, rpn_bbox loss=0.003081, rcnn_cls loss=0.000544, rcnn_bbox loss=0.000455
+INFO:root:Step 24250: total loss=0.013281, rpn_cls loss=0.000030, rpn_bbox loss=0.000336, rcnn_cls loss=0.012616, rcnn_bbox loss=0.000299

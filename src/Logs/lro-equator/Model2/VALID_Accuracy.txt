@@ -1,0 +1,10 @@
+Epoch: 1VALID set mAP: 0.011874 
+Epoch: 2VALID set mAP: 0.000058 
+Epoch: 3VALID set mAP: 0.002753 
+Epoch: 4VALID set mAP: 0.000146 
+Epoch: 5VALID set mAP: 0.000611 
+Epoch: 6VALID set mAP: 0.000842 
+Epoch: 7VALID set mAP: 0.001371 
+Epoch: 8VALID set mAP: 0.000052 
+Epoch: 9VALID set mAP: 0.000550 
+Epoch: 10VALID set mAP: 0.000579 

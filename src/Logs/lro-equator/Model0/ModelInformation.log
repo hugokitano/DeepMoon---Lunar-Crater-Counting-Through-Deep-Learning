@@ -1,0 +1,819 @@
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '../Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:Step 250: total loss=0.994085, rpn_cls loss=0.521047, rpn_bbox loss=0.044811, rcnn_cls loss=0.425918, rcnn_bbox loss=0.002309
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:Step 250: total loss=2.543842, rpn_cls loss=0.571413, rpn_bbox loss=1.578359, rcnn_cls loss=0.391945, rcnn_bbox loss=0.002125
+INFO:root:Optimization Finished!
+INFO:root:Model saved in file: ../Logs/lro-equator/Model0/part_1.ckpt
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 1.7247e-05
+INFO:root:Mean Average Precision on TEST Set: 0.000017
+INFO:root:Making New TEST file
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:tensorflow:Restoring parameters from ../Logs/lro-equator/Model0/part_1.ckpt
+INFO:root:Model restored from part_1.ckpt.meta
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 0, 'file_epoch': 1, 'restore': True, 'restore_file': 'part_1.ckpt.meta', 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model0/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Training for 1 epochs
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:tensorflow:Restoring parameters from ../Logs/lro-equator/Model0/part_1.ckpt
+INFO:root:Model restored from part_1.ckpt.meta
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 0, 'file_epoch': 1, 'restore': True, 'restore_file': 'part_1.ckpt.meta', 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model0/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 0.0079957
+INFO:root:Mean Average Precision on TEST Set: 0.007996
+INFO:root:Appending to TEST file
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:Model training from scratch.
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 1, 'file_epoch': 1, 'restore': False, 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model1/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 0.0079957
+INFO:root:Mean Average Precision on TEST Set: 0.007996
+INFO:root:Appending to TEST file
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:tensorflow:Restoring parameters from ../Logs/lro-equator/Model2/part_10.ckpt
+INFO:root:Model restored from part_10.ckpt.meta
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 2, 'file_epoch': 10, 'restore': True, 'restore_file': 'part_10.ckpt.meta', 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model2/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 0.001109
+INFO:root:Mean Average Precision on TEST Set: 0.001109
+INFO:root:Appending to TEST file
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:tensorflow:Restoring parameters from ../Logs/lro-equator/Model2/part_9.ckpt
+INFO:root:Model restored from part_9.ckpt.meta
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 2, 'file_epoch': 9, 'restore': True, 'restore_file': 'part_9.ckpt.meta', 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model2/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 0.00050792
+INFO:root:Mean Average Precision on TEST Set: 0.000508
+INFO:root:Appending to TEST file
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:tensorflow:Restoring parameters from ../Logs/lro-equator/Model2/part_9.ckpt
+INFO:root:Model restored from part_9.ckpt.meta
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 2, 'file_epoch': 9, 'restore': True, 'restore_file': 'part_9.ckpt.meta', 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model2/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 0.00050792
+INFO:root:Mean Average Precision on TEST Set: 0.000508
+INFO:root:Appending to TEST file
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:tensorflow:Restoring parameters from ../Logs/lro-equator/Model2/part_6.ckpt
+INFO:root:Model restored from part_6.ckpt.meta
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 2, 'file_epoch': 6, 'restore': True, 'restore_file': 'part_6.ckpt.meta', 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model2/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 0.00060077
+INFO:root:Mean Average Precision on TEST Set: 0.000601
+INFO:root:Appending to TEST file
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:root:conv_1 output: (1, ?, ?, 32)
+INFO:root:conv_2 output: (1, ?, ?, 64)
+INFO:root:conv_3 output: (1, ?, ?, 64)
+INFO:root:conv_4 output: (1, ?, ?, 128)
+INFO:root:conv_5 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 128)
+INFO:root:conv_1 output: (1, ?, ?, 18)
+INFO:root:conv_1 output: (1, ?, ?, 36)
+INFO:root:flat_1 output: (?, 6272)
+INFO:root:fc_1 output: (?, 1024)
+INFO:root:fc_1 output: (?, 2)
+INFO:root:fc_1 output: (?, 8)
+INFO:tensorflow:Restoring parameters from ../Logs/lro-equator/Model0/part_1.ckpt
+INFO:root:Model restored from part_1.ckpt.meta
+INFO:root:Learning Rate: 0.001000
+INFO:root:Epochs: 1
+INFO:root:None
+INFO:root:{'seed': 1234, 'run_num': 0, 'num_epochs': 1, 'restore_num': 0, 'file_epoch': 1, 'restore': True, 'restore_file': 'part_1.ckpt.meta', 'data_directory': '/Users/mfinkels/repos/tf-Faster-RCNN-craterDetection/project/Data/LRO-equator/', 'save_directory': '../Logs/', 'model_directory': 'lro-equator/', 'batch_size': 1, 'display_step': 250, 'learning_rate': 0.001, 'vis': True, 'gpu': 0, 'restore_slim_file': None, 'restore_directory': '../Logs/lro-equator/Model0/', 'logging_directory': '../Logs/lro-equator/Model0/'}
+INFO:root:Average Precision for class 1: 0.0079957
+INFO:root:Mean Average Precision on TEST Set: 0.007996
+INFO:root:Appending to TEST file

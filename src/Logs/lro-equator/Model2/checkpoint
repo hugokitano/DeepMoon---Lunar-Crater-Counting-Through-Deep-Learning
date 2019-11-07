@@ -1,0 +1,6 @@
+model_checkpoint_path: "part_10.ckpt"
+all_model_checkpoint_paths: "part_6.ckpt"
+all_model_checkpoint_paths: "part_7.ckpt"
+all_model_checkpoint_paths: "part_8.ckpt"
+all_model_checkpoint_paths: "part_9.ckpt"
+all_model_checkpoint_paths: "part_10.ckpt"

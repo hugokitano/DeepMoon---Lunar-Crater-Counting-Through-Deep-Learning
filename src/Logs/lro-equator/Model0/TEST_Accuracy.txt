@@ -1,0 +1,8 @@
+Epoch: 0TEST set mAP: 0.000017 
+Epoch: 1TEST set mAP: 0.007996 
+Epoch: 0TEST set mAP: 0.007996 
+Epoch: 10TEST set mAP: 0.001109 
+Epoch: 9TEST set mAP: 0.000508 
+Epoch: 9TEST set mAP: 0.000508 
+Epoch: 6TEST set mAP: 0.000601 
+Epoch: 1TEST set mAP: 0.007996 
