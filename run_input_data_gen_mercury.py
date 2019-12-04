@@ -30,7 +30,7 @@ import time
 use_mpi4py = False
 
 # Source image path.
-source_image_path = "./catalogues/MSGR_DEM_USG_SC_J_V02.JP2"
+source_image_path = "./catalogues/Mercury.png"
 
 # LROC crater catalog csv path.
 # lroc_csv_path = "./catalogues/LROCCraters.csv"
@@ -41,11 +41,11 @@ source_image_path = "./catalogues/MSGR_DEM_USG_SC_J_V02.JP2"
 # Output filepath and file header.  Eg. if outhead = "./input_data/train",
 # files will have extension "./out/train_inputs.hdf5" and
 # "./out/train_targets.hdf5"
-# outhead = "./input_data/Mercury"
+outhead = "./input_data/Mercury"
 
 # Number of images to make (if using MPI4py, number of image per thread to
 # make).
-amt = 30000
+amt = 50
 
 # Range of image widths, in pixels, to crop from source image (input images
 # will be scaled down to ilen). For Orthogonal projection, larger images are
@@ -105,6 +105,7 @@ if __name__ == '__main__':
         istart = 0
 
     # Read source image and crater catalogs.
+    Image.MAX_IMAGE_PIXELS = None
     img = Image.open(source_image_path).convert("L")
     # craters = igen.ReadLROCHeadCombinedCraterCSV(filelroc=lroc_csv_path,
     #                                              filehead=head_csv_path)

@@ -11,7 +11,7 @@ from PIL import Image
 import cartopy.crs as ccrs
 import cartopy.img_transform as cimg
 import collections
-import opencv
+import cv2
 import h5py
 import utils.transform as trf
 
@@ -405,6 +405,7 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
         return [None, None]
 
     if type(img) != Image.Image:
+        Image.MAX_IMAGE_PIXELS = None
         img = Image.open(img).convert("L")
 
     # Warp image.
@@ -416,7 +417,7 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
     # if ctr_sub:
     #     llbd_in = None
     # else:
-    #     llbd_in = llbd
+    llbd_in = llbd
     # ctr_xy = WarpCraterLoc(craters, geoproj, oproj, oextent, imgwshp,
     #                        llbd=llbd_in, origin=origin)
     # # Shift crater x, y positions by offset (origin doesn't matter for y-shift,
@@ -451,8 +452,9 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
     # Shift central long/lat
     centrallonglat_xy.loc[:, "x"] += offset[0]
     centrallonglat_xy.loc[:, "y"] += offset[1]
+    print(imgo is None)
 
-    return [imgo, distortion_coefficient, centrallonglat_xy]
+    return (imgo, distortion_coefficient, centrallonglat_xy)
 
 ############# Create target dataset (and helper functions) #############
 
@@ -826,13 +828,19 @@ def GenDataset(img, outhead, rawlen_range=[1000, 2000],
         #                           minpix=minpix)
 
         # Convert Plate Carree to Orthographic.
-        [imgo, distortion_coefficient, clonglat_xy] = (
+        #print(len(PlateCarree_to_Orthographic(im, llbd, iglobe=iglobe, arad=arad, origin=origin, rgcoeff=1.2, slivercut=0.5)))
+        output = (
             PlateCarree_to_Orthographic(
                 im, llbd, iglobe=iglobe, arad=arad, origin=origin, rgcoeff=1.2, slivercut=0.5))
 
-        if imgo is None:
+        if len(output) == 2:
             print("Discarding narrow image")
             continue
+        else:
+            (imgo, distortion_coefficient, clonglat_xy) = output
+            if imgo is None:
+                print("Discarding narrow image")
+                continue
 
         imgo_arr = np.asanyarray(imgo)
         assert imgo_arr.sum() > 0, ("Sum of imgo is zero!  There likely was "
