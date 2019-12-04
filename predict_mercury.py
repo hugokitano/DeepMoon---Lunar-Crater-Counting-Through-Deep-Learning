@@ -20,22 +20,21 @@ def main():
     #### TEST CRATERS
     test_imgs = h5py.File(path + '/Mercury_images.hdf5', 'r')
 
-    test_data = {'imgs': [test_imgs['input_images'][:8, :, :].astype('float32')]}
+    images = test_imgs['input_images'][:100, :, :].astype('float32')
+    test_data = {'imgs': [images[np.sum(images, axis = (1, 2)) > 0]]}
     #for img in test_data['imgs'][0]:
     #    print(np.sum(img), img[img > 0].shape)
     proc.preprocess(test_data)
     sd_input_images = test_data['imgs'][0]
 
-    images = [2]
+    print(len(sd_input_images))
+    images = [2, 10, 20, 44]
     plot_dir = "plots"
 
     for iwant in images:
         print("Predicting on image", iwant)
-        print(sd_input_images[iwant:iwant+1].shape)
         pred = model.predict(sd_input_images[iwant:iwant + 1])
         extracted_rings = tmt.template_match_t(pred[0].copy(), minrad=2.)  # x coord, y coord, radius
-        print(sd_input_images[iwant])
-        print(pred[0])
         fig = plt.figure(figsize=[9, 9])
         [ax1, ax2, ax3] = fig.subplots(1, 3)
         ax1.imshow(sd_input_images[iwant].squeeze(), origin='upper', cmap='Greys_r', vmin=0, vmax=1.1)
