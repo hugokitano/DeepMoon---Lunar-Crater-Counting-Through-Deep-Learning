@@ -476,7 +476,7 @@ def test_model(Data, Craters, MP, i_MP):
     model = load_model(MP['model_path'])
 
     print("###################################")
-    get_metrics(Data['test'], Craters['test'], dim, model, MP['minrad'], MP['maxrad'])
+    get_metrics(Data['test'], Craters['test'], dim, model, beta=1, minrad=MP['minrad'], maxrad=MP['maxrad'])
     print("###################################")
 
     
