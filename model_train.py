@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import h5py
 
-from keras.models import Model
+from keras.models import Model, load_model
 from keras.layers.core import Dropout, Reshape
 from keras.regularizers import l2
 
@@ -26,14 +26,17 @@ import utils.processing as proc
 from keras import __version__ as keras_version
 k2 = True if keras_version[0] == '2' else False
 
-# If Keras is v2.x.x, create Keras 1-syntax wrappers.
+print ('inside keras version : ', keras_version, k2)
+
+# If Keras is v1.x.x, create Keras 1-syntax wrappers.
 if not k2:
     from keras.layers import merge, Input
     from keras.layers.convolutional import (Convolution2D, MaxPooling2D,
-                                            UpSampling2D)
+                                            UpSampling2D, AtrousConvolution2D)
 
 else:
     from keras.layers import Concatenate, Input
+    print ('imported concatenate and input')
     from keras.layers.convolutional import (Conv2D, MaxPooling2D,
                                             UpSampling2D)
 
@@ -48,6 +51,7 @@ else:
                       kernel_initializer=init,
                       kernel_regularizer=W_regularizer,
                       padding=border_mode)
+    print ('all imports done')
 
 
 ########################
@@ -119,7 +123,7 @@ def custom_image_generator(data, target, batch_size=32):
             yield (d, t)
 
 ########################
-def get_metrics(data, craters, dim, model, beta=1):
+def get_metrics(data, craters, dim, model, beta=1, minrad = 3, maxrad=50):
     """Function that prints pertinent metrics at the end of each epoch. 
 
     Parameters
@@ -134,12 +138,16 @@ def get_metrics(data, craters, dim, model, beta=1):
         Keras model
     beta : int, optional
         Beta value when calculating F-beta score. Defaults to 1.
+    minrad : int
+        Minimum radius of craters for evaluation
+    maxrad : int
+        Maximum radius of craters for evaluation
     """
     X, Y = data[0], data[1]
 
     # Get csvs of human-counted craters
     csvs = []
-    minrad, maxrad, cutrad, n_csvs = 3, 50, 0.8, len(X)
+    cutrad, n_csvs = 0.8, len(X)
     diam = 'Diameter (pix)'
     for i in range(n_csvs):
         csv = craters[proc.get_id(i)]
@@ -164,6 +172,8 @@ def get_metrics(data, craters, dim, model, beta=1):
     frac_duplicates = []
     preds = model.predict(X)
     for i in range(n_csvs):
+        if (i % 200 == 0):
+            print ('evaluated score for ', i, ' images')
         if len(csvs[i]) < 3:
             continue
         (N_match, N_csv, N_detect, maxr,
@@ -258,12 +268,21 @@ def build_model(dim, learn_rate, lmbda, drop, FL, init, n_filters):
 
     a2 = Convolution2D(n_filters * 2, FL, FL, activation='relu', init=init,
                        W_regularizer=l2(lmbda), border_mode='same')(a1P)
+    #a2 = AtrousConvolution2D(n_filters * 2, FL, FL, activation='relu', init=init,
+    #                   W_regularizer=l2(lmbda), border_mode='same', atrous_rate=(2,2))(a1P)    # sus
     a2 = Convolution2D(n_filters * 2, FL, FL, activation='relu', init=init,
-                       W_regularizer=l2(lmbda), border_mode='same')(a2)
+                       W_regularizer=l2(lmbda), border_mode='same')(a2)   # original a2
+    
+    #a2 = Convolution2D(n_filters * 2, FL, FL, activation='relu', init=init,
+    #                   W_regularizer=l2(lmbda), border_mode='same', dilation_rate=2)(a2)    # sus # keras 2
+    #a2 = AtrousConvolution2D(n_filters * 2, FL, FL, activation='relu', init=init,
+    #                   W_regularizer=l2(lmbda), border_mode='same', atrous_rate=(2,2))(a2)    # sus
     a2P = MaxPooling2D((2, 2), strides=(2, 2))(a2)
 
     a3 = Convolution2D(n_filters * 4, FL, FL, activation='relu', init=init,
                        W_regularizer=l2(lmbda), border_mode='same')(a2P)
+    #a3 = AtrousConvolution2D(n_filters * 2, FL, FL, activation='relu', init=init,
+    #                   W_regularizer=l2(lmbda), border_mode='same', atrous_rate=(2,2))(a2P)       # sus
     a3 = Convolution2D(n_filters * 4, FL, FL, activation='relu', init=init,
                        W_regularizer=l2(lmbda), border_mode='same')(a3)
     a3P = MaxPooling2D((2, 2), strides=(2, 2),)(a3)
@@ -410,6 +429,11 @@ def get_models(MP):
         'test': [test['input_images'][:n_test].astype('float32'),
                  test['target_masks'][:n_test].astype('float32')]
     }
+    print('printing dictionary : ###########################\n\n')
+    for key in Data:
+        for i in range(len(Data[key])):
+            print (key, i, type(Data[key][i]), Data[key][i].shape)
+        
     train.close()
     dev.close()
     test.close()
@@ -427,3 +451,67 @@ def get_models(MP):
     # Iterate over parameters
     for i in range(MP['N_runs']):
         train_and_test_model(Data, Craters, MP, i)
+
+
+############################
+def test_model(Data, Craters, MP, i_MP):
+    """Function that trains, tests and saves the model, printing out metrics
+    after each model. 
+
+    Parameters
+    ----------
+    Data : dict
+        Inputs and Target Moon data.
+    Craters : dict
+        Human-counted crater data.
+    MP : dict
+        Contains all relevant parameters.
+    i_MP : int
+        Iteration number (when iterating over hypers).
+    """
+    # Static params
+    dim = MP['dim']
+
+    # load model
+    model = load_model(MP['model_path'])
+
+    print("###################################")
+    get_metrics(Data['test'], Craters['test'], dim, model, MP['minrad'], MP['maxrad'])
+    print("###################################")
+
+    
+############################
+def predict_using_pretrained_model(MP):
+    """Top-level function that loads test data files and evaluates pretrained model on them.
+
+    Parameters
+    ----------
+    MP : dict
+        Model Parameters.
+    """
+    dir = MP['dir']
+    n_test = MP['n_test']
+
+    # Load data
+    test = h5py.File('%stest_images.hdf5' % dir, 'r')
+    Data = {
+        'test': [test['input_images'][:n_test].astype('float32'),
+                 test['target_masks'][:n_test].astype('float32')]
+    }
+    print('printing dictionary : ###########################\n\n')
+    for key in Data:
+        for i in range(len(Data[key])):
+            print (key, i, type(Data[key][i]), Data[key][i].shape)
+
+    test.close()
+
+    # Rescale, normalize, add extra dim
+    proc.preprocess(Data)
+
+    # Load ground-truth craters
+    Craters = {
+        'test': pd.HDFStore('%stest_craters.hdf5' % dir, 'r')
+    }
+
+    # evaluate the model
+    test_model(Data, Craters, MP, i)
