@@ -35,7 +35,7 @@ import pandas as pd
 ########## Global Variables ##########
 
 # dataset : should be one of train, valid or test
-dataset = 'train'
+dataset = 'test'
 
 # Output filepath and file header.  Eg. if outhead = "./input_data/train",
 # files will have extension "./out/train_inputs.hdf5" and
@@ -355,8 +355,8 @@ def genDataset(outhead, rawlen_range=[1000, 2000],
                                     "image.")
         
         
-        craters = pd.read_csv('LRO-equator/Annotations_YOLO/' + name + '.txt',  delimiter= '\s+',
-                          names=['x1', 'y1', 'x2', 'y2'])
+        craters = pd.read_csv('LRO-equator/Annotations/' + name + '.txt',  delimiter= '\s+',
+                          names=['x1', 'y1', 'x2', 'y2', 'one'])
         
         #print('craters before scaling : ')
         #print (craters)
