@@ -191,13 +191,14 @@ def make_mask(craters, img, binary=True, rings=False, ringwidth=1,
     cy = (craters["y1"].values.astype('int') + craters["y2"].values.astype('int')) / 2 
     x_rad = abs(craters["x1"].values.astype('int') - craters["x2"].values.astype('int')) / 2
     y_rad = abs(craters["y1"].values.astype('int') - craters["y2"].values.astype('int')) / 2
-    radius = (x_rad + y_rad) / 2.
+    radius = (x_rad + y_rad) / 2.    
+    diameter = x_rad + y_rad
     
     #print ('craters : ', craters.head)
     
     craters["x"] = cx   # add these new derived columns
     craters["y"] = cy
-    craters["radius"] = radius
+    craters["Diameter (pix)"] = diameter
     
     #print ('craters_new: ', craters.head)
 
@@ -344,6 +345,7 @@ def genDataset(outhead, rawlen_range=[1000, 2000],
 
     for i, name in enumerate(filenames):
         img = Image.open('LRO-equator/Images/' + name + '.jpg').convert("L")
+        img_number = "img_{i:0{zp}d}".format(i=istart + i, zp=zeropad)
         width, height = img.size
         #print ('shape of image', img.size)
         im = img.resize([ilen, ilen], resample=Image.NEAREST)
@@ -384,7 +386,7 @@ def genDataset(outhead, rawlen_range=[1000, 2000],
         #print ('craters head after adding x, y and radius')
         #print (craters.head())
         
-        craters_h5[name] = craters
+        craters_h5[img_number] = craters
         imgs_h5.flush()
         craters_h5.flush()
 
