@@ -150,8 +150,10 @@ def get_metrics(data, craters, dim, model, beta=1, minrad = 3, maxrad=50):
     csvs = []
     cutrad, n_csvs = 0.8, len(X)
     diam = 'Diameter (pix)'
+    zeropad = int(np.log10(n_csvs)) + 1
+
     for i in range(n_csvs):
-        csv = craters[proc.get_id(i)]
+        csv = craters[proc.get_id(i, zeropad = zeropad)]
         # remove small/large/half craters
         csv = csv[(csv[diam] < 2 * maxrad) & (csv[diam] > 2 * minrad)]
         csv = csv[(csv['x'] + cutrad * csv[diam] / 2 <= dim)]
