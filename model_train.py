@@ -9,6 +9,7 @@ from __future__ import absolute_import, division, print_function
 import numpy as np
 import pandas as pd
 import h5py
+import pdb
 
 from keras.models import Model, load_model
 from keras.layers.core import Dropout, Reshape
@@ -162,7 +163,6 @@ def get_metrics(data, craters, dim, model, beta=1, minrad = 3, maxrad=50):
         else:
             csv_coords = np.asarray((csv['x'], csv['y'], csv[diam] / 2)).T
             csvs.append(csv_coords)
-
     # Calculate custom metrics
     print("")
     print("*********Custom Loss*********")
@@ -491,9 +491,9 @@ def predict_using_pretrained_model(MP):
     """
     dir = MP['dir']
     n_test = MP['n_test']
-
+    # pdb.set_trace()
     # Load data
-    test = h5py.File('%stest_images.hdf5' % dir, 'r')
+    test = h5py.File('%smars_images_5k.hdf5' % dir, 'r')
     Data = {
         'test': [test['input_images'][:n_test].astype('float32'),
                  test['target_masks'][:n_test].astype('float32')]
@@ -510,7 +510,7 @@ def predict_using_pretrained_model(MP):
 
     # Load ground-truth craters
     Craters = {
-        'test': pd.HDFStore('%stest_craters.hdf5' % dir, 'r')
+        'test': pd.HDFStore('%smars_craters.hdf5' % dir, 'r')
     }
 
     # evaluate the model

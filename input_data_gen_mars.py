@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Input Image Dataset Generator Functions
+
 Functions for generating input and target image datasets from Lunar digital
 elevation maps and crater catalogues.
 """
@@ -14,11 +15,20 @@ import collections
 import cv2
 import h5py
 import utils.transform as trf
-
+import pdb
 ########## Read Cratering CSVs ##########
+
+
+def ReadMarsCraterCSV(filename="catalogues/MA132843GT.csv", sortlat =True):
+    craters = pd.read_csv(filename, header=0, usecols=[1,2,4])
+    craters.columns=['Long','Lat','Diameter (km)']
+    craters.sort_values(by='Lat', inplace=True)
+    craters.reset_index(inplace=True, drop=True)
+    return craters
 
 def ReadLROCCraterCSV(filename="catalogues/LROCCraters.csv", sortlat=True):
     """Reads LROC 5 - 20 km crater catalogue CSV.
+
     Parameters
     ----------
     filename : str, optional
@@ -26,6 +36,7 @@ def ReadLROCCraterCSV(filename="catalogues/LROCCraters.csv", sortlat=True):
         folder.
     sortlat : bool, optional
         If `True` (default), order catalogue by latitude.
+
     Returns
     -------
     craters : pandas.DataFrame
@@ -41,6 +52,7 @@ def ReadLROCCraterCSV(filename="catalogues/LROCCraters.csv", sortlat=True):
 
 def ReadHeadCraterCSV(filename="catalogues/HeadCraters.csv", sortlat=True):
     """Reads Head et al. 2010 >= 20 km diameter crater catalogue.
+
     Parameters
     ----------
     filename : str, optional
@@ -48,6 +60,7 @@ def ReadHeadCraterCSV(filename="catalogues/HeadCraters.csv", sortlat=True):
         the current folder.
     sortlat : bool, optional
         If `True` (default), order catalogue by latitude.
+
     Returns
     -------
     craters : pandas.DataFrame
@@ -66,6 +79,7 @@ def ReadLROCHeadCombinedCraterCSV(filelroc="catalogues/LROCCraters.csv",
                                   filehead="catalogues/HeadCraters.csv",
                                   sortlat=True):
     """Combines LROC 5 - 20 km crater dataset with Head >= 20 km dataset.
+
     Parameters
     ----------
     filelroc : str, optional
@@ -75,6 +89,7 @@ def ReadLROCHeadCombinedCraterCSV(filelroc="catalogues/LROCCraters.csv",
         folder.
     sortlat : bool, optional
         If `True` (default), order catalogue by latitude.
+
     Returns
     -------
     craters : pandas.DataFrame
@@ -98,6 +113,7 @@ def ReadLROCHeadCombinedCraterCSV(filelroc="catalogues/LROCCraters.csv",
 def regrid_shape_aspect(regrid_shape, target_extent):
     """Helper function copied from cartopy.img_transform for resizing an image
     without changing its aspect ratio.
+
     Parameters
     ----------
     regrid_shape : int or float
@@ -105,6 +121,7 @@ def regrid_shape_aspect(regrid_shape, target_extent):
     target_extent : some
         Width and height of the target image (generally not in units of
         pixels).
+
     Returns
     -------
     regrid_shape : tuple
@@ -125,6 +142,7 @@ def WarpImage(img, iproj, iextent, oproj, oextent,
               origin="upper", rgcoeff=1.2):
     """Warps images with cartopy.img_transform.warp_array, then plots them with
     imshow.  Based on cartopy.mpl.geoaxes.imshow.
+
     Parameters
     ----------
     img : numpy.ndarray
@@ -187,6 +205,7 @@ def WarpImagePad(img, iproj, iextent, oproj, oextent, origin="upper",
                  rgcoeff=1.2, fillbg="black"):
     """Wrapper for WarpImage that adds padding to warped image to make it the
     same size as the original.
+
     Parameters
     ----------
     img : numpy.ndarray
@@ -210,6 +229,7 @@ def WarpImagePad(img, iproj, iextent, oproj, oextent, origin="upper",
     fillbg : 'black' or 'white', optional.
         Fills padding with either black (0) or white (255) values.  Default is
         black.
+
     Returns
     -------
     imgo : PIL.Image.Image
@@ -269,6 +289,7 @@ def WarpCraterLoc(craters, geoproj, oproj, oextent, imgdim, llbd=None,
                   origin="upper"):
     """Wrapper for WarpImage that adds padding to warped image to make it the
     same size as the original.
+
     Parameters
     ----------
     craters : pandas.DataFrame
@@ -289,6 +310,7 @@ def WarpCraterLoc(craters, geoproj, oproj, oextent, imgdim, llbd=None,
         Based on imshow convention for displaying image y-axis.
         "upper" means that [0,0] is upper-left corner of image;
         "lower" means it is bottom-left.
+
     Returns
     -------
     ctr_wrp : pandas.DataFrame
@@ -326,9 +348,11 @@ def WarpCraterLoc(craters, geoproj, oproj, oextent, imgdim, llbd=None,
 
 ############# Warp Plate Carree to Orthographic ###############
 
-def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upper",
+def PlateCarree_to_Orthographic(img, llbd, craters, iglobe=None,
+                                ctr_sub=False, arad=1737.4, origin="upper",
                                 rgcoeff=1.2, slivercut=0.):
     """Transform Plate Carree image and associated csv file into Orthographic.
+
     Parameters
     ----------
     img : PIL.Image.image or str
@@ -356,6 +380,7 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
     slivercut : float from 0 to 1, optional
         If transformed image aspect ratio is too narrow (and would lead to a
         lot of padding, return null images).
+
     Returns
     -------
     imgo : PIL.Image.image
@@ -370,6 +395,7 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
     """
 
     # If user doesn't provide Moon globe properties.
+    #pdb.set_trace()
     if not iglobe:
         iglobe = ccrs.Globe(semimajor_axis=arad*1000.,
                             semiminor_axis=arad*1000., ellipse=None)
@@ -401,8 +427,8 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
     # Sanity check for narrow images; done before the most expensive part of
     # the function.
     oaspect = (oextent[1] - oextent[0]) / (oextent[3] - oextent[2])
-    if oaspect < slivercut:
-        return [None, None]
+    # if oaspect < slivercut:
+    #     return [None, None]
 
     if type(img) != Image.Image:
         Image.MAX_IMAGE_PIXELS = None
@@ -414,16 +440,16 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
                                          fillbg="black")
 
     # Convert crater x, y position.
-    # if ctr_sub:
-    #     llbd_in = None
-    # else:
-    llbd_in = llbd
-    # ctr_xy = WarpCraterLoc(craters, geoproj, oproj, oextent, imgwshp,
-    #                        llbd=llbd_in, origin=origin)
-    # # Shift crater x, y positions by offset (origin doesn't matter for y-shift,
-    # # since padding is symmetric).
-    # ctr_xy.loc[:, "x"] += offset[0]
-    # ctr_xy.loc[:, "y"] += offset[1]
+    if ctr_sub:
+        llbd_in = None
+    else:
+        llbd_in = llbd
+    ctr_xy = WarpCraterLoc(craters, geoproj, oproj, oextent, imgwshp,
+                           llbd=llbd_in, origin=origin)
+    # Shift crater x, y positions by offset (origin doesn't matter for y-shift,
+    # since padding is symmetric).
+    ctr_xy.loc[:, "x"] += offset[0]
+    ctr_xy.loc[:, "y"] += offset[1]
 
     # Pixel scale for orthographic determined (for images small enough that
     # tan(x) approximately equals x + 1/3x^3 + ...) by l = R_moon*theta,
@@ -442,7 +468,7 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
                          " {0:.2f}!".format(distortion_coefficient))
     pixperkm = trf.km2pix(imgo.size[1], llbd[3] - llbd[2],
                           dc=distortion_coefficient, a=arad)
-    # ctr_xy["Diameter (pix)"] = ctr_xy["Diameter (km)"] * pixperkm
+    ctr_xy["Diameter (pix)"] = ctr_xy["Diameter (km)"] * pixperkm
 
     # Determine x, y position of central lat/long.
     centrallonglat = pd.DataFrame({"Long": [xll[4]], "Lat": [yll[4]]})
@@ -452,9 +478,8 @@ def PlateCarree_to_Orthographic(img, llbd, iglobe=None, arad=2439.4, origin="upp
     # Shift central long/lat
     centrallonglat_xy.loc[:, "x"] += offset[0]
     centrallonglat_xy.loc[:, "y"] += offset[1]
-    print(imgo is None)
 
-    return (imgo, distortion_coefficient, centrallonglat_xy)
+    return [imgo, ctr_xy, distortion_coefficient, centrallonglat_xy]
 
 ############# Create target dataset (and helper functions) #############
 
@@ -477,6 +502,7 @@ def circlemaker(r=10.):
 def ringmaker(r=10., dr=1):
     """
     Creates ring of radius r and thickness dr.
+
     Parameters
     ----------
     r : float
@@ -508,6 +534,7 @@ def get_merge_indices(cen, imglen, ks_h, ker_shp):
     """Helper function that returns indices for merging stencil with base
     image, including edge case handling.  x and y are identical, so code is
     axis-neutral.
+
     Assumes INTEGER values for all inputs!
     """
 
@@ -536,6 +563,7 @@ def get_merge_indices(cen, imglen, ks_h, ker_shp):
 def make_mask(craters, img, binary=True, rings=False, ringwidth=1,
               truncate=True):
     """Makes crater mask binary image (does not yet consider crater overlap).
+
     Parameters
     ----------
     craters : pandas.DataFrame
@@ -550,6 +578,7 @@ def make_mask(craters, img, binary=True, rings=False, ringwidth=1,
         If rings is True, ringwidth sets the width (dr) of the ring.
     truncate : bool
         If True, truncate mask where image truncates.
+
     Returns
     -------
     mask : numpy.ndarray
@@ -594,9 +623,10 @@ def make_mask(craters, img, binary=True, rings=False, ringwidth=1,
 
 ############# Create dataset (and helper functions) #############
 
-def AddPlateCarree_XY(craters, imgdim, cdim=[-180., 180., -90., 90.],
+def AddPlateCarree_XY(craters, imgdim, cdim=[-180., 180., -90., 90.], 
                       origin="upper"):
     """Adds x and y pixel locations to craters dataframe.
+
     Parameters
     ----------
     craters : pandas.DataFrame
@@ -620,6 +650,7 @@ def AddPlateCarree_XY(craters, imgdim, cdim=[-180., 180., -90., 90.],
 
 def ResampleCraters(craters, llbd, imgheight, arad=1737.4, minpix=0):
     """Crops crater file, and removes craters smaller than some minimum value.
+
     Parameters
     ----------
     craters : pandas.DataFrame
@@ -633,6 +664,7 @@ def ResampleCraters(craters, llbd, imgheight, arad=1737.4, minpix=0):
     minpix : int, optional
         Minimium crater pixel size to be included in output.  Default is 0
         (equvalent to no cutoff).
+
     Returns
     -------
     ctr_sub : pandas.DataFrame
@@ -660,6 +692,7 @@ def ResampleCraters(craters, llbd, imgheight, arad=1737.4, minpix=0):
 
 def InitialImageCut(img, cdim, newcdim):
     """Crops image, so that the crop output can be used in GenDataset.
+
     Parameters
     ----------
     img : PIL.Image.Image
@@ -669,6 +702,7 @@ def InitialImageCut(img, cdim, newcdim):
     newcdim : list-like
         Crop boundaries (x_min, x_max, y_min, y_max).  There is
         currently NO CHECK that newcdim is within cdim!
+
     Returns
     -------
     img : PIL.Image.Image
@@ -685,18 +719,20 @@ def InitialImageCut(img, cdim, newcdim):
     return img
 
 
-def GenDataset(img, outhead, rawlen_range=[1000, 2000],
-               rawlen_dist='log', ilen=256, cdim=[-180., 180., -90., 90.],
-               arad=2439.4, minpix=0, tglen=256, binary=True, rings=True,
+def GenDataset(img, craters, outhead, rawlen_range=[1000, 2000],
+               rawlen_dist='log', ilen=256, cdim=[-180., 180., -60., 60.],
+               arad=1737.4, minpix=0, tglen=256, binary=True, rings=True,
                ringwidth=1, truncate=True, amt=100, istart=0, seed=None,
                verbose=False):
     """Generates random dataset from a global DEM and crater catalogue.
+
     The function randomly samples small images from a global digital elevation
     map (DEM) that uses a Plate Carree projection, and converts the small
     images to Orthographic projection.  Pixel coordinates and radii of craters
     from the catalogue that fall within each image are placed in a
     corresponding Pandas dataframe.  Images and dataframes are saved to disk in
     hdf5 format.
+
     Parameters
     ----------
     img : PIL.Image.Image
@@ -746,14 +782,13 @@ def GenDataset(img, outhead, rawlen_range=[1000, 2000],
     """
 
     # just in case we ever make this user-selectable...
-    pdb.set_trace()
     origin = "upper"
 
     # Seed random number generator.
     np.random.seed(seed)
 
     # Get craters.
-    # AddPlateCarree_XY(craters, list(img.size), cdim=cdim, origin=origin)
+    AddPlateCarree_XY(craters, list(img.size), cdim=cdim, origin=origin)
 
     iglobe = ccrs.Globe(semimajor_axis=arad*1000., semiminor_axis=arad*1000.,
                         ellipse=None)
@@ -790,7 +825,7 @@ def GenDataset(img, outhead, rawlen_range=[1000, 2000],
     imgs_h5_cll = imgs_h5.create_group("cll_xy")
     imgs_h5_cll.attrs['definition'] = ("(x, y) pixel coordinates of the "
                                        "central long / lat.")
-    # craters_h5 = pd.HDFStore(outhead + '_craters.hdf5', 'w')
+    craters_h5 = pd.HDFStore(outhead + '_craters.hdf5', 'w')
 
     # Zero-padding for hdf5 keys.
     zeropad = int(np.log10(amt)) + 1
@@ -825,23 +860,18 @@ def GenDataset(img, outhead, rawlen_range=[1000, 2000],
         im = im.resize([ilen, ilen], resample=Image.NEAREST)
 
         # Remove all craters that are too small to be seen in image.
-        # ctr_sub = ResampleCraters(craters, llbd, im.size[1], arad=arad,
-        #                           minpix=minpix)
+        ctr_sub = ResampleCraters(craters, llbd, im.size[1], arad=arad,
+                                  minpix=minpix)
 
         # Convert Plate Carree to Orthographic.
-        #print(len(PlateCarree_to_Orthographic(im, llbd, iglobe=iglobe, arad=arad, origin=origin, rgcoeff=1.2, slivercut=0.5)))
-        output = (
+        [imgo, ctr_xy, distortion_coefficient, clonglat_xy] = (
             PlateCarree_to_Orthographic(
-                im, llbd, iglobe=iglobe, arad=arad, origin=origin, rgcoeff=1.2, slivercut=0.5))
+                im, llbd, ctr_sub, iglobe=iglobe, ctr_sub=True,
+                arad=arad, origin=origin, rgcoeff=1.2, slivercut=0.5))
 
-        if len(output) == 2:
+        if imgo is None:
             print("Discarding narrow image")
             continue
-        else:
-            (imgo, distortion_coefficient, clonglat_xy) = output
-            if imgo is None:
-                print("Discarding narrow image")
-                continue
 
         imgo_arr = np.asanyarray(imgo)
         assert imgo_arr.sum() > 0, ("Sum of imgo is zero!  There likely was "
@@ -853,12 +883,12 @@ def GenDataset(img, outhead, rawlen_range=[1000, 2000],
         # leaves artifacts).
         tgt = np.asanyarray(imgo.resize((tglen, tglen),
                                         resample=Image.BILINEAR))
-        # mask = make_mask(ctr_xy, tgt, binary=binary, rings=rings,
-        #                  ringwidth=ringwidth, truncate=truncate)
+        mask = make_mask(ctr_xy, tgt, binary=binary, rings=rings,
+                         ringwidth=ringwidth, truncate=truncate)
 
         # Output everything to file.
         imgs_h5_inputs[i, ...] = imgo_arr
-        # imgs_h5_tgts[i, ...] = mask
+        imgs_h5_tgts[i, ...] = mask
 
         sds_box = imgs_h5_box.create_dataset(img_number, (4,), dtype='int32')
         sds_box[...] = box
@@ -869,10 +899,10 @@ def GenDataset(img, outhead, rawlen_range=[1000, 2000],
         sds_cll = imgs_h5_cll.create_dataset(img_number, (2,), dtype='float')
         sds_cll[...] = clonglat_xy.loc[:, ['x', 'y']].as_matrix().ravel()
 
-        # craters_h5[img_number] = ctr_xy
+        craters_h5[img_number] = ctr_xy
 
         imgs_h5.flush()
-        # craters_h5.flush()
+        craters_h5.flush()
 
     imgs_h5.close()
-    # craters_h5.close()
+    craters_h5.close()

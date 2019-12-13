@@ -15,6 +15,7 @@ import collections
 import cv2
 import h5py
 import utils.transform as trf
+import pdb
 
 ########## Read Cratering CSVs ##########
 
@@ -778,6 +779,7 @@ def GenDataset(img, craters, outhead, rawlen_range=[1000, 2000],
     np.random.seed(seed)
 
     # Get craters.
+    pdb.set_trace()
     AddPlateCarree_XY(craters, list(img.size), cdim=cdim, origin=origin)
 
     iglobe = ccrs.Globe(semimajor_axis=arad*1000., semiminor_axis=arad*1000.,

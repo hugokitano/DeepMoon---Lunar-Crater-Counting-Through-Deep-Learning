@@ -12,12 +12,12 @@ import utils.processing as proc
 
 
 def main():
-    pdb.set_trace()
-    zenodo_path = './data/'
+    # pdb.set_trace()
+    zenodo_path = './mars_data/'
     model = load_model('models/model_30k.h5')
 
        #### TEST CRATERS 
-    test_imgs = h5py.File(zenodo_path + '/test_images.hdf5', 'r')
+    test_imgs = h5py.File(zenodo_path + '/mars_images_5k.hdf5', 'r')
 
     test_data = {'imgs': [test_imgs['input_images'][...].astype('float32'),
                         test_imgs['target_masks'][...].astype('float32')]}
@@ -25,15 +25,16 @@ def main():
     sd_input_images = test_data['imgs'][0]
     sd_target_masks = test_data['imgs'][1]
 
-    images = [1,10,16]
-    plot_dir = "sample_plots"
+    images = [25,36]
+    plot_dir = "plots"
 
     for iwant in images:
         pred = model.predict(sd_input_images[iwant:iwant + 1])
         extracted_rings = tmt.template_match_t(pred[0].copy(), minrad=2.) # x coord, y coord, radius
 
         fig = plt.figure(figsize=[16, 16])
-        [[ax1, ax2], [ax3, ax4]] = fig.subplots(2, 2)
+        plt.rcParams["font.size"] = 20
+        [[ax1, ax4], [ax2, ax3]] = fig.subplots(2, 2)
         ax1.imshow(sd_input_images[iwant].squeeze(), origin='upper', cmap='Greys_r', vmin=0, vmax=1.1)
         ax2.imshow(sd_target_masks[iwant].squeeze(), origin='upper', cmap='Greys_r')
         ax3.imshow(pred[0], origin='upper', cmap='Greys_r', vmin=0, vmax=1)
@@ -41,7 +42,7 @@ def main():
         for x, y, r in extracted_rings:
             circle = plt.Circle((x, y), r, color='blue', fill=False, linewidth=2, alpha=0.5)
             ax4.add_artist(circle)
-        ax1.set_title('Moon DEM Image')
+        ax1.set_title('Mars DEM Image')
         ax2.set_title('Ground-Truth Target Mask')
         ax3.set_title('CNN Predictions')
         ax4.set_title('Post-CNN Craters')
